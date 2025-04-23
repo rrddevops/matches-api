@@ -24,6 +24,7 @@ serviceAccount:
   name: ""
 
 podAnnotations:
+  linkerd.io/inject: enabled
   ingress.kubernetes.io/service-upstream: "true"
   nginx.ingress.kubernetes.io/service-upstream : "true"
 
@@ -48,6 +49,7 @@ kong:
 ingress:
   enabled: true
   annotations:
+    kubernetes.io/ingress.class: "kong"
     konghq.com/preserve-host: "false"
     konghq.com/strip-path: "true"
     konghq.com/plugins: prometheus-matches,matches-otel
