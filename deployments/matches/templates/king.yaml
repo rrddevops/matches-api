@@ -5,4 +5,4 @@ metadata:
   name: matches-do-not-preserve-host
 upstream:
   host_header: {{ include "matches.fullname" . }}.bets.svc
-{{end}}
+{{- end }}
